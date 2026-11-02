@@ -278,7 +278,7 @@ $('#ri').onclick=()=>{const[h,m]=remTime(),d=new Date(),z=new Date().toISOString
 const t=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//bs-podcasts//UZ','BEGIN:VEVENT','UID:bs-podcasts-daily@'+location.host,'DTSTAMP:'+z,'DTSTART:'+stamp(d,h,m),'RRULE:FREQ=DAILY','SUMMARY:🎧 Bugungi podkast vaqti','DESCRIPTION:Kamida bitta podkast eshiting!','BEGIN:VALARM','TRIGGER:PT0M','ACTION:DISPLAY','DESCRIPTION:Podkast vaqti','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
 const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/calendar'}));a.download='b-podcasts-eslatma.ics';document.body.append(a);a.click();a.remove()};
 /* YouTube: kalitni Google Cloud'dan olib shu yerga qo‘ying */
-const YT_KEY='';
+const YT_KEY='AIzaSyCFGLAcoZ9vvskcrqHHm8o7tYzMmxrzWUo';
 const EN={'Til o‘rganish':'learn english','Texnologiya':'technology','Biznes':'business','Karyera':'career','Fan':'science','Tarix':'history','O‘sish':'self improvement','Salomatlik':'health','Yangiliklar':'news','Sayohat':'travel','Sport':'sports','Hikoyalar':'storytelling','O‘yinlar':'video games','Komediya':'comedy','Madaniyat va musiqa':'music culture'};
 async function ytSearch(q){const ck='yt2:'+q+duF,c=ls.get(ck,null);if(c&&Date.now()-c.t<864e5)return c.v;
 const r=await fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoDuration='+(duF==='s'?'medium':'long')+'&maxResults=25&q='+encodeURIComponent(q)+'&key='+encodeURIComponent(YT_KEY));
