@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>b’s podcasts — ingliz tilidagi podkastlar</title>
+<meta name="description" content="Ingliz tilidagi podkastlar, mavzular bo‘yicha. To‘g‘ridan-to‘g‘ri shu saytda tinglang.">
+<meta name="theme-color" content="#0b0914">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="b’s podcasts">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>try{var t=localStorage.getItem('bp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--bg:#0e0b1a;--card:#1a1530;--card2:#241d44;--tx:#f4f1ff;--mut:#9d95c9;--a:#ff4fa3;--b:#7c5cff;--c:#27e1c1}
+@media (prefers-color-scheme:light){:root{--bg:#f6f3ff;--card:#fff;--card2:#ebe6ff;--tx:#1b1535;--mut:#6a6490}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(900px 500px at 10% -10%,color-mix(in srgb,var(--b) 35%,transparent),transparent),radial-gradient(800px 500px at 100% 0,color-mix(in srgb,var(--a) 28%,transparent),transparent),var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:170px}
+.wrap{max-width:900px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 14px 20px}
+h1{margin:6px 0 0;font-size:clamp(38px,9vw,60px);letter-spacing:-2px;font-weight:900;background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);margin:2px 0 14px}
+.sr{display:flex;gap:8px}
+#q{flex:1;min-width:0;padding:14px 16px;border-radius:14px;border:2px solid transparent;background:var(--card);color:var(--tx);font-size:16px;outline:none}
+#q:focus{border-color:var(--b)}
+.go{border:0;border-radius:14px;padding:0 16px;background:linear-gradient(90deg,var(--b),var(--a));color:#fff;font-weight:700;cursor:pointer;font-size:15px}
+.hint{color:var(--mut);font-size:13px;margin:6px 2px 10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.chips button{border:0;border-radius:999px;padding:8px 13px;background:var(--card);color:var(--tx);font-size:14px;cursor:pointer}
+.chips button.on{background:var(--c);color:#06231e;font-weight:700}
+h2{font-size:18px;margin:22px 0 10px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.c{display:flex;gap:12px;align-items:center;background:var(--card);border-radius:16px;padding:10px;border:2px solid transparent;cursor:pointer}
+.c:hover{border-color:var(--b)}
+.cv{width:54px;height:54px;border-radius:13px;flex:none;display:grid;place-items:center;font-size:24px;overflow:hidden}
+.cv img{width:100%;height:100%;object-fit:cover}
+.m{flex:1;min-width:0}.m b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.m small{color:var(--mut);font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.f{border:0;background:none;font-size:20px;cursor:pointer;color:var(--mut)}.f.on{color:var(--a)}
+.e{color:var(--mut);text-align:center;padding:26px}.e a{color:var(--c)}
+footer{color:var(--mut);font-size:12px;text-align:center;margin:30px 14px}
+#sh{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;padding:max(14px,env(safe-area-inset-top)) 14px 190px}
+#sh[hidden]{display:none}
+.shh{display:flex;align-items:center;gap:10px;max-width:900px;margin:0 auto 12px}
+.shh h3{margin:0;flex:1;font-size:20px}
+.x{border:0;border-radius:12px;background:var(--card);color:var(--tx);font-size:18px;padding:10px 14px;cursor:pointer}
+#shb{max-width:900px;margin:0 auto;display:grid;gap:8px}
+.ep{display:flex;gap:12px;align-items:center;text-align:left;border:2px solid transparent;border-radius:14px;background:var(--card);color:var(--tx);padding:12px;cursor:pointer;font-size:15px;width:100%}
+.ep.cur{border-color:var(--a)}
+.ep i{font-style:normal;flex:none;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;display:grid;place-items:center;font-size:13px}
+.ep span{flex:1;min-width:0}.ep small{display:block;color:var(--mut);margin-top:2px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(14px);padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--card2)}
+.bar[hidden]{display:none}
+.in{max-width:900px;margin:0 auto}
+#nm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#ar{color:var(--mut);font-size:13px}
+.row{display:flex;align-items:center;gap:10px;margin-top:6px}
+input[type=range]{flex:1;accent-color:var(--a)}
+.ctl{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:4px}
+.ctl button{border:0;background:none;color:var(--tx);font-size:15px;cursor:pointer;font-weight:700;padding:8px}
+#pp{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;font-size:22px}
+.t{font-size:12px;color:var(--mut);min-width:40px;text-align:center}
+.goal{background:var(--card);border-radius:16px;padding:12px 14px;margin:0 0 14px}
+.gt{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:15px}.gt span{color:var(--mut)}
+.gb{height:8px;border-radius:99px;background:var(--card2);margin:8px 0 10px;overflow:hidden}.gb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--c));border-radius:99px;transition:width .4s}
+.gr{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px}
+.gr input{padding:8px;border-radius:10px;border:2px solid var(--card2);background:var(--bg);color:var(--tx);font-size:15px}
+.gr button,.gr a{border:0;border-radius:10px;padding:9px 12px;background:var(--c);color:#06231e;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none}
+.gn{display:block;color:var(--mut);font-size:12px;margin-top:6px}
+#lg{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-items:center;padding:20px}#lg[hidden]{display:none}
+.lgc{max-width:380px;width:100%;text-align:center}.lgc input{width:100%;margin:10px 0;padding:14px;border-radius:14px;border:2px solid var(--card2);background:var(--card);color:var(--tx);font-size:16px}
+.lgc .go{width:100%;padding:14px}.who{display:flex;gap:8px;align-items:center;justify-content:flex-end;font-size:13px;color:var(--mut)}.who .x{padding:6px 10px;font-size:13px}
+.fl{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px;align-items:center}.fl b{font-size:12px;color:var(--mut);min-width:62px}
+.fl button{border:0;border-radius:999px;padding:6px 11px;background:var(--card);color:var(--tx);font-size:13px;cursor:pointer}.fl button.on{background:var(--a);color:#fff;font-weight:700}
+:root[data-theme=dark]{--bg:#0b0914;--card:#16122a;--card2:#221b42;--tx:#f5f3ff;--mut:#9a93c4}
+:root[data-theme=light]{--bg:#f7f5ff;--card:#fff;--card2:#ece8ff;--tx:#1b1535;--mut:#6a6490}
+*{-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+.wrap{padding:max(14px,env(safe-area-inset-top)) 14px 20px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+h1{margin:0;font-size:30px;letter-spacing:-1.2px}
+.who{display:flex;gap:6px;align-items:center;margin:0}#who{display:none}
+.x{font-size:15px;padding:9px 12px}
+.goal{border-radius:18px;margin:0 0 12px;padding:12px 14px}
+.gt{font-size:14px}.gb{height:6px;margin:8px 0}
+.goal summary,.flt summary{cursor:pointer;color:var(--mut);font-size:13px;list-style:none}
+.goal summary::-webkit-details-marker,.flt summary::-webkit-details-marker{display:none}
+.gr{margin-top:8px}
+#q{border-radius:16px}.go{border-radius:16px;padding:0 18px}
+.chips{flex-wrap:nowrap;overflow-x:auto;margin:12px -14px 8px;padding:0 14px 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}.chips button{flex:none;white-space:nowrap;padding:9px 14px}
+.flt{margin:0 0 12px}.flt summary{display:inline-block;background:var(--card);border-radius:999px;padding:7px 13px;color:var(--tx)}
+.fl{margin:10px 0 0}
+.c{border-radius:18px}.c:active{transform:scale(.985)}
+.cv{width:56px;height:56px;border-radius:15px}.m b{font-size:15px}.m small{margin-top:2px;font-size:12.5px}
+.bar{border-radius:22px 22px 0 0}
+.seg{display:flex;background:var(--card);border-radius:14px;padding:4px;margin:0 0 12px}
+.seg button{flex:1;border:0;background:none;color:var(--mut);font-size:14px;font-weight:700;padding:9px;border-radius:11px;cursor:pointer}
+.seg button.on{background:linear-gradient(135deg,var(--b),var(--a));color:#fff}
+.cv{color:#fff;font-weight:800;font-size:20px;letter-spacing:-.5px}
+.av{width:34px;height:34px;border-radius:50%;object-fit:cover}
+#ob{position:fixed;inset:0;z-index:49;background:var(--bg);display:grid;place-items:center;padding:20px;overflow:auto}#ob[hidden]{display:none}
+.wc{flex-wrap:wrap!important;overflow:visible!important;margin:10px 0!important;padding:0!important;justify-content:center}
+#gbtn{display:flex;justify-content:center;margin:14px 0}.fl[hidden]{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><h1>b’s podcasts</h1><div class="who"><img id="av" class="av" alt="" hidden><button class="x" id="pfb" aria-label="Qiziqishlar">✎</button><button class="x" id="tg" aria-label="Rejim">◐</button><button class="x" id="out">Chiqish</button></div></div>
+<div class="seg"><button data-l="en" class="on">🇬🇧 English</button><button data-l="uz">🇺🇿 O‘zbekcha</button></div>
+<div class="goal"><div class="gt"><b id="gs"></b><span id="gd"></span></div><div class="gb"><i id="gp"></i></div>
+<details><summary>⏰ Eslatma</summary><div class="gr"><input type="time" id="rt" value="20:00"><button id="ri">📅 Kalendarga</button><a id="rg" target="_blank" rel="noopener">Google</a></div></details></div>
+<div class="sr"><input id="q" type="search" placeholder="Podkast qidirish…" autocomplete="off"><button class="go" id="go">Qidirish</button></div>
+<div class="chips" id="ch"></div>
+<details class="flt"><summary>Filtr</summary><div class="fl" id="fl1"></div><div class="fl" id="fl2"></div></details>
+<div class="g" id="g"></div>
+<div id="r"></div>
+</div>
+<div id="sh" hidden><div class="shh"><h3 id="sht"></h3><button class="x" id="shx" aria-label="Yopish">✕</button></div><div id="shb"></div></div>
+<div class="bar" id="bar" hidden><div class="in">
+<div id="nm"></div><div id="ar"></div>
+<div class="row"><span class="t" id="tc">0:00</span><input type="range" id="sk" min="0" max="1000" value="0"><span class="t" id="td">0:00</span></div>
+<div class="ctl"><button id="b15" aria-label="15 soniya orqaga">↺15</button><button id="pp" aria-label="Pauza / davom">▶</button><button id="f30" aria-label="30 soniya oldinga">30↻</button><button id="sp">1×</button></div>
+</div></div>
+<div id="lg" hidden><div class="lgc"><h2>🎧 b’s podcasts</h2><div id="gbtn"></div><input id="le" type="email" placeholder="Email" autocomplete="email"><button class="go" id="lb">Kirish</button><p id="lm" class="hint"></p></div></div>
+<div id="ob" hidden><div class="lgc"><h2>Nimaga qiziqasiz?</h2><div class="chips wc" id="obt"></div><p class="hint">Darajangiz</p><div class="chips wc" id="obl"></div><button class="go" id="obd">Tayyor</button></div></div>
+<audio id="au" preload="none"></audio>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="config.js"></script>
+<script>
+const $=s=>document.querySelector(s),au=$('#au');
+let UP='';const ls={get(k,d){try{const v=localStorage.getItem(UP+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(UP+k,JSON.stringify(v))}catch(e){}}};
+const D={'Til o‘rganish':['🗣',['BBC 6 Minute English|Qisqa, ravon inglizcha suhbatlar','All Ears English Podcast|Amerikacha kundalik inglizcha','The English We Speak|Iboralar va slenglar','Luke’s English Podcast|Britancha inglizcha, hazil bilan','English Learning for Curious Minds|Qiziqarli mavzular orqali','VOA Learning English|Sodda tilda yangiliklar','Storynory|Ingliz tilidagi hikoyalar']],
+'Texnologiya':['💻',['Lex Fridman Podcast|AI, fan va texnologiya suhbatlari','Hard Fork|Texnologiya yangiliklari','Darknet Diaries|Kiberjinoyat va xakerlik hikoyalari','Decoder|Texnologiya rahbarlari bilan suhbat','Practical AI|Sun’iy intellekt amaliyotda','The Vergecast|Gadjetlar va texnologiya']],
+'Biznes':['📦',['How I Built This|Mashhur kompaniyalar tarixi','Planet Money|Iqtisodiyot oddiy tilda','Supply Chain Now|Logistika va ta’minot zanjiri','Freakonomics Radio|Iqtisodiyotga g‘ayrioddiy qarash','Acquired|Buyuk kompaniyalar tahlili','The Diary of a CEO|Tadbirkorlar bilan suhbat','Masters of Scale|Startaplarni o‘stirish','My First Million|Biznes g‘oyalari','The Logistics of Logistics|Logistika sohasi suhbatlari']],
+'Karyera':['💼',['WorkLife with Adam Grant|Ish va karyera psixologiyasi','HBR IdeaCast|Menejment g‘oyalari','Hello Monday|Ishni yaxshi ko‘rish yo‘llari']],
+'Fan':['🔬',['Radiolab|Ilm-fan haqida qiziqarli hikoyalar','Stuff You Should Know|Hamma narsa haqida','Science Vs|Faktlar va mif','99% Invisible|Dizayn va arxitektura','Hidden Brain|Inson xulq-atvori sirlari','StarTalk Radio|Kosmos va fan','Short Wave|Qisqa ilmiy hikoyalar','Ologies|Fanning g‘aroyib sohalari']],
+'Tarix':['🏛',['Dan Carlin’s Hardcore History|Chuqur tarixiy hikoyalar','The Rest Is History|Tarix qiziqarli tarzda','Revolutions|Inqiloblar tarixi','Lore|Qorong‘u afsona va rivoyatlar','Fall of Civilizations|Tsivilizatsiyalar qulashi']],
+'O‘sish':['🧠',['TED Talks Daily|Har kuni yangi g‘oya','The Happiness Lab|Baxt psixologiyasi','Huberman Lab|Miya, uyqu va sog‘liq','The Mel Robbins Podcast|Motivatsiya va odatlar','Deep Questions with Cal Newport|Diqqat va samarali ish','The Tim Ferriss Show|Muvaffaqiyatli odamlar odatlari']],
+'Salomatlik':['💪',['Maintenance Phase|Salomatlik haqidagi mifflar','Feel Better, Live More|Sog‘lom turmush','The Peter Attia Drive|Uzoq umr va sog‘liq']],
+'Yangiliklar':['📰',['The Daily|Kunlik yangiliklar','Up First|Qisqa kunlik yangiliklar','BBC Global News Podcast|Dunyo yangiliklari']],
+'Sayohat':['🌍',['Rick Steves Europe|Yevropa bo‘ylab sayohat','Women Who Travel|Sayohat hikoyalari']],
+'Sport':['⚽',['Pardon My Take|Sport va kulgi','The Bill Simmons Podcast|Sport va pop-madaniyat','Men in Blazers|Futbol haqida hazil bilan']],
+'Hikoyalar':['📖',['Serial|Haqiqiy voqealar, bir mavsum — bir hikoya','This American Life|Hayotiy hikoyalar','Criminal|G‘alati jinoyat hikoyalari','Crime Junkie|Jinoyat ishlari tahlili','The Moth|Odamlarning jonli hikoyalari']],
+'O‘yinlar':['🎮',['Giant Bombcast|Video o‘yinlar haqida suhbat','Kinda Funny Games Daily|O‘yin yangiliklari']],
+'Komediya':['😂',['SmartLess|Mehmonlar bilan kulgili suhbat','Conan O’Brien Needs a Friend|Mashhurlar bilan hazil','Armchair Expert|Samimiy intervyular']],
+'Madaniyat va musiqa':['🎵',['Song Exploder|Qo‘shiq qanday yaratilgani','Switched On Pop|Pop musiqa tahlili','Broken Record|Musiqachilar bilan suhbat','Pop Culture Happy Hour|Kino, kitob va pop-madaniyat','Fresh Air|Mashhurlar bilan chuqur intervyular']]};
+const MS=`BBC 6 Minute English|B1s
+All Ears English Podcast|B1m
+The English We Speak|A2s
+Luke’s English Podcast|B2l
+English Learning for Curious Minds|B1m
+VOA Learning English|A2s
+Storynory|A2s
+Lex Fridman Podcast|C1x
+Hard Fork|C1l
+Darknet Diaries|B2l
+Decoder|C1l
+Practical AI|C1m
+The Vergecast|C1l
+How I Built This|B2l
+Planet Money|B2m
+Supply Chain Now|C1m
+Freakonomics Radio|B2m
+Acquired|C1x
+The Diary of a CEO|B2l
+Masters of Scale|B2m
+My First Million|B2l
+The Logistics of Logistics|C1m
+WorkLife with Adam Grant|B2m
+HBR IdeaCast|C1m
+Hello Monday|B2m
+Radiolab|B2l
+Stuff You Should Know|B2l
+Science Vs|B2m
+99% Invisible|B2m
+Hidden Brain|B2m
+StarTalk Radio|B2l
+Short Wave|B1s
+Ologies|C1l
+Dan Carlin’s Hardcore History|C1x
+The Rest Is History|B2l
+Revolutions|B2m
+Lore|B2m
+Fall of Civilizations|B2l
+TED Talks Daily|B1s
+The Happiness Lab|B2m
+Huberman Lab|C1x
+The Mel Robbins Podcast|B1l
+Deep Questions with Cal Newport|C1l
+The Tim Ferriss Show|C1x
+Maintenance Phase|B2l
+Feel Better, Live More|B2l
+The Peter Attia Drive|C1l
+The Daily|B2m
+Up First|B1s
+BBC Global News Podcast|B2m
+Rick Steves Europe|B1m
+Women Who Travel|B2m
+Pardon My Take|B2l
+The Bill Simmons Podcast|B2l
+Men in Blazers|B2m
+Serial|B2l
+This American Life|B2l
+Criminal|B2m
+Crime Junkie|B1l
+The Moth|B1m
+Giant Bombcast|B2x
+Kinda Funny Games Daily|B2m
+SmartLess|B2l
+Conan O’Brien Needs a Friend|B2l
+Armchair Expert|B2x
+Song Exploder|B2m
+Switched On Pop|B2m
+Broken Record|B2l
+Pop Culture Happy Hour|B2m
+Fresh Air|B2m`;
+const M={};MS.split('\n').forEach(l=>{const p=l.split('|');if(p[1])M[p[0]]=p[1]});
+const DL={s:'≤15 daq',m:'15–45 daq',l:'45–120 daq',x:'2+ soat'};
+const bk=m=>m<=15?'s':m<=45?'m':m<=120?'l':'x';
+const fmM=m=>m>=60?Math.floor(m/60)+' soat'+(m%60?' '+(m%60)+' daq':''):m+' daq';
+let lvF='Hammasi',duF='Hammasi';
+const LVN={Hammasi:'Hammasi',A2:'A2 · oson',B1:'B1 · IELTS 4–5',B2:'B2 · 5.5–6.5',C1:'C1 · 7+'},DLn=Object.assign({Hammasi:'Hammasi'},DL);
+const LQ={A2:' slow english for beginners',B1:' english for intermediate learners B1',B2:' upper intermediate english B2',C1:' advanced english'},lvQ=()=>LQ[lvF]||'';
+function drawFl(){const a=$('#fl1'),b=$('#fl2');a.hidden=lang==='uz';a.replaceChildren(el('b','','Daraja:'));b.replaceChildren(el('b','','Uzunlik:'));
+for(const v in LVN){const x=el('button',v===lvF?'on':'',LVN[v]);x.onclick=()=>{lvF=v;render()};a.append(x)}
+for(const v in DLn){const x=el('button',v===duF?'on':'',DLn[v]);x.onclick=()=>{duF=v;render()};b.append(x)}}
+const L=[];for(const t in D)for(const s of D[t][1]){const[n,d]=s.split('|'),k=M[n]||'B2m',lv=k.slice(0,2),du=k.slice(2);L.push({t,e:D[t][0],n,d:lv+' · '+DL[du],ds:d,lv,du})}
+const DU={'Suhbat va jamiyat':['🎙',['NmaGap|Mehmonlar bilan erkin suhbatlar']],'Sport':['⚽',['Markaziy sektor|O‘zbekiston futboli tahlili']],
+'Tarix va fan':['🏛',['Qurultoy|Tarixchi olimlar bilan suhbat','Texnoplov|Fan va texnologiya oddiy tilda']],
+'Dolzarb':['🔥',['Sun’iy intellekt|Yangi texnologiyalar|sun’iy intellekt podkast o‘zbek','Startap va biznes|Tadbirkorlik tajribalari|biznes startap podkast o‘zbek','Moliya va investitsiya|Pul va investitsiya|moliya investitsiya podkast o‘zbek','Ta’lim va chet tillari|IELTS va til o‘rganish|ta’lim chet tili podkast o‘zbek','IT va dasturlash|Dasturchilar suhbati|dasturlash IT podkast o‘zbek','Psixologiya|Shaxsiy rivojlanish|psixologiya podkast o‘zbek','Sog‘lom turmush|Salomatlik va odatlar|sog‘lom turmush podkast o‘zbek','Ish va migratsiya|Chet elda ishlash|migratsiya ish chet el podkast o‘zbek','Karyera va freelance|Masofaviy ish|karyera freelance podkast o‘zbek','Kino va madaniyat|Kino, kitob, san’at|kino kitob madaniyat podkast o‘zbek']]};
+const LU=[];for(const t in DU)for(const s of DU[t][1]){const[n,d,q]=s.split('|');LU.push({t,e:DU[t][0],n,d,ds:d,q,lang:'uz',du:null})}
+let topic='Hammasi',fav=new Set(),cur=null,pos={},show=null,lang='en',pf=null;
+const hue=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))%360;return h};
+const fmt=s=>isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
+const ap=n=>'https://podcasts.apple.com/search?term='+encodeURIComponent(n);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
+function jsonp0(u){return new Promise((ok,no)=>{const cb='cb'+Math.random().toString(36).slice(2),s=document.createElement('script');
+const cl=()=>{clearTimeout(t);delete window[cb];s.remove()},t=setTimeout(()=>{cl();no('j')},9000);
+window[cb]=d=>{cl();ok(d)};s.onerror=()=>{cl();no('j')};s.src=u+'&callback='+cb;document.head.append(s)})}
+async function jsonp(u){try{const c=new AbortController(),t=setTimeout(()=>c.abort(),10000);try{const r=await fetch(u,{signal:c.signal});if(r.ok)return await r.json()}finally{clearTimeout(t)}}catch(e){}return jsonp0(u)}
+const itu=(n,l,c)=>jsonp('https://itunes.apple.com/search?media=podcast&country='+(c||'us')+'&limit='+l+'&term='+encodeURIComponent(n.replace(/[’‘'`]/g,'')));
+async function find(n,cn){cn=cn||'us';const k='f2:'+cn+n,c=ls.get(k,null);if(c&&c.id)return c;const d=await itu(n,8,cn),R=(d.results||[]).filter(x=>x.feedUrl);
+const nm=t=>String(t).toLowerCase().replace(/[^a-z0-9]/g,''),r=R.find(x=>nm(x.collectionName).includes(nm(n)))||(cn==='us'?R[0]:null);if(!r)throw 'f';
+const o={feed:r.feedUrl,title:r.collectionName,id:r.collectionId,img:String(r.artworkUrl100||'').replace('100x100','200x200')};ls.set(k,o);return o}
+
+const EC={};
+const parseRss=x=>{const d=new DOMParser().parseFromString(x,'text/xml');return[...d.querySelectorAll('item')].map(i=>{const e=i.querySelector('enclosure');return e&&e.getAttribute('url')?{t:(i.querySelector('title')||{}).textContent||'Epizod',d:((i.querySelector('pubDate')||{}).textContent||'').slice(5,16),u:e.getAttribute('url').replace(/^http:/,'https:')}:null}).filter(Boolean)};
+async function tf(u){const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);try{const r=await fetch(u,{signal:c.signal});if(!r.ok)throw 0;return await r.text()}finally{clearTimeout(t)}}
+async function eps(f){const key=f.id||f.feed;if(EC[key])return EC[key];let L=[];
+if(f.id){try{const d=await jsonp('https://itunes.apple.com/lookup?country=us&entity=podcastEpisode&limit=100&id='+f.id);
+L=(d.results||[]).filter(x=>x.episodeUrl).map(x=>({t:x.trackName||'Epizod',d:(x.releaseDate||'').slice(0,10),u:String(x.episodeUrl).replace(/^http:/,'https:'),m:Math.round((x.trackTimeMillis||0)/60000)}))}catch(e){}}
+if(!L.length&&f.feed){const E=encodeURIComponent(f.feed);
+for(const g of[()=>tf(f.feed).then(parseRss),()=>tf('https://api.allorigins.win/raw?url='+E).then(parseRss),()=>tf('https://api.rss2json.com/v1/api.json?rss_url='+E).then(t=>JSON.parse(t).items.filter(i=>i.enclosure&&i.enclosure.link).map(i=>({t:i.title||'Epizod',d:(i.pubDate||'').slice(0,10),u:String(i.enclosure.link).replace(/^http:/,'https:')})))]){try{L=await g();if(L.length)break}catch(e){}}}
+if(!L.length)throw 'e';return EC[key]=L}
+const ini=n=>n.replace(/^The /i,'').split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+function setCov(cv,u){const i=el('img');i.alt='';i.onload=()=>cv.replaceChildren(i);i.src=u}
+const CQ=[];let cbz=false;
+function covLoad(fn){CQ.push(fn);if(cbz)return;cbz=true;(function nx(){const f=CQ.shift();if(!f){cbz=false;return}f().catch(()=>{}).then(()=>setTimeout(nx,2200))})()}
+const io='IntersectionObserver'in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);if(e.target._cv)e.target._cv()}}),{rootMargin:'150px'}):null;
+function card(o){const c=el('div','c');const cv=el('div','cv');
+const h=hue(o.n);cv.style.background=`linear-gradient(135deg,hsl(${h},75%,52%),hsl(${(h+70)%360},80%,42%))`;cv.textContent=ini(o.n);
+if(o.img&&o.img.startsWith('https://'))setCov(cv,o.img);
+else if(!o.q&&!o.feed){const cn=o.lang==='uz'?'uz':'us',cc=ls.get('f2:'+cn+o.n,null);if(cc&&cc.img)setCov(cv,cc.img);else{c._cv=()=>covLoad(()=>find(o.n,cn).then(r=>{if(r.img)setCov(cv,r.img)}));if(io)io.observe(c)}}
+const m=el('div','m');m.append(el('b','',o.n),el('small','',o.d||''));c.append(cv,m);
+if(o.fav){const f=el('button','f'+(fav.has(o.n)?' on':''),fav.has(o.n)?'♥':'♡');f.setAttribute('aria-label','Sevimli');
+f.onclick=e=>{e.stopPropagation();fav.has(o.n)?fav.delete(o.n):fav.add(o.n);ls.set('bp-fav',[...fav]);render()};c.append(f)}
+c.onclick=()=>openShow(o);return c}
+const LL=()=>lang==='uz'?LU:L;
+function recs(){const p=pf||{t:[],lv:'B1'},li=['A2','B1','B2','C1'],ft=new Set(L.filter(o=>fav.has(o.n)).map(o=>o.t));
+return L.map(o=>({o,s:(p.t.includes(o.t)?3:0)+(ft.has(o.t)?1:0)+(o.lv===p.lv?2:Math.abs(li.indexOf(o.lv)-li.indexOf(p.lv))===1?1:0)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,18).map(x=>x.o)}
+function render(){const q=$('#q').value.trim().toLowerCase(),ch=$('#ch');ch.replaceChildren();
+document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+for(const t of(lang==='uz'?['Hammasi','♥ Sevimlilar',...Object.keys(DU)]:['Siz uchun','Hammasi','♥ Sevimlilar','▶ YouTube',...Object.keys(D)])){const b=el('button',t===topic?'on':'',t);b.onclick=()=>{topic=t;render()};ch.append(b)}
+drawFl();const g=$('#g');g.replaceChildren();
+if(topic==='▶ YouTube'&&lang==='en'){ytPanel(g);return}
+const base=topic==='Siz uchun'&&lang==='en'?recs():LL();
+for(const o of base){if(topic==='♥ Sevimlilar'?!fav.has(o.n):(topic!=='Hammasi'&&topic!=='Siz uchun'&&o.t!==topic))continue;
+if(o.lang!=='uz'&&((lvF!=='Hammasi'&&o.lv!==lvF)||(duF!=='Hammasi'&&o.du!==duF)))continue;
+if(!(o.n+' '+o.t+' '+o.d+' '+(o.ds||'')).toLowerCase().includes(q))continue;g.append(card({...o,fav:true}))}
+if(!g.children.length)g.append(el('div','e',topic==='♥ Sevimlilar'?'Hali sevimli yo‘q. ♡ ni bosing.':topic==='Siz uchun'?'Qiziqishlarni tanlang: ✎':'Topilmadi. Qidirish tugmasini bosing.'))}
+async function openShow(o){if(o.lang==='uz'&&o.q){ytOpen(o.q,o.n);return}const sh=$('#sh'),b=$('#shb');sh.hidden=false;sh.scrollTop=0;$('#sht').textContent=o.n;b.replaceChildren(el('div','e','Yuklanmoqda…'));
+try{const f=o.feed?o:Object.assign({},o,await find(o.n,o.lang==='uz'?'uz':'us'));const all0=await eps(f),list=duF==='Hammasi'?all0:all0.filter(x=>!x.m||bk(x.m)===duF);show=f.title||o.n;b.replaceChildren();
+if(!list.length)throw 'd';
+let k=0;const more=el('button','x','Ko‘proq ko‘rsatish');more.style.margin='8px auto';
+const add=()=>{list.slice(k,k+30).forEach(ep=>{const r=el('button','ep'+(cur&&cur.u===ep.u?' cur':''));const i=el('i','','▶'),s=el('span');s.append(document.createTextNode(ep.t),el('small','',ep.d+(ep.m?' · '+fmM(ep.m):'')));r.append(i,s);r.onclick=()=>{play(ep,o.n);b.querySelectorAll('.ep').forEach(x=>x.classList.toggle('cur',x===r))};b.insertBefore(r,more)});k+=30;more.hidden=k>=list.length};
+more.onclick=add;b.append(more);add()}
+catch(e){if(o.lang==='uz'){ytOpen(o.n+' podkast',o.n);return}b.replaceChildren();const d=el('div','e','Epizodlarni yuklab bo‘lmadi'+(e==='f'?' (katalogdan topilmadi). ':e==='e'?' (epizodlar manbasi javob bermadi). ':e==='j'?' (katalogga ulanib bo‘lmadi). ':e==='d'?' (bu uzunlikdagi epizod topilmadi, uzunlik filtrini o‘zgartiring). ':'. '));const a=el('button','x','Qayta urinish');a.onclick=()=>openShow(o);d.append(a);b.append(d)}}
+function play(ep,name){if(cur&&cur.u===ep.u){au.paused?au.play():au.pause();return}
+if(cur){pos[cur.u]=au.currentTime;ls.set('bp-pos',pos)}
+cur=ep;au.src=ep.u;au.onloadedmetadata=()=>{const p=pos[ep.u]||0;if(p>0&&p<au.duration-5)au.currentTime=p};
+au.playbackRate=rates[ri];au.play().catch(()=>{});$('#bar').hidden=false;$('#nm').textContent=ep.t;$('#ar').textContent=name;
+if('mediaSession'in navigator)try{navigator.mediaSession.metadata=new MediaMetadata({title:ep.t,artist:name,album:'b’s podcasts'})}catch(e){}}
+const rates=[1,1.25,1.5,2,0.85];let ri=0,lastSave=0;
+$('#sp').onclick=()=>{ri=(ri+1)%rates.length;au.playbackRate=rates[ri];$('#sp').textContent=rates[ri]+'×'};
+$('#pp').onclick=()=>{if(cur)au.paused?au.play():au.pause()};
+$('#b15').onclick=()=>{au.currentTime=Math.max(0,au.currentTime-15)};
+$('#f30').onclick=()=>{au.currentTime=Math.min(au.duration||1e9,au.currentTime+30)};
+au.onplay=()=>{$('#pp').textContent='⏸';lt=au.currentTime};
+au.onpause=()=>{$('#pp').textContent='▶';ls.set('bp-days',days);if(cur){pos[cur.u]=au.currentTime;ls.set('bp-pos',pos)}};
+au.onended=()=>{if(cur){pos[cur.u]=0;ls.set('bp-pos',pos)}};
+au.onerror=()=>{if(cur)$('#ar').textContent='Bu epizodni ochib bo‘lmadi — boshqasini tanlang'};
+au.ontimeupdate=()=>{tick();$('#tc').textContent=fmt(au.currentTime);$('#td').textContent=fmt(au.duration);if(au.duration)$('#sk').value=au.currentTime/au.duration*1000;
+if(cur&&Date.now()-lastSave>5000){lastSave=Date.now();pos[cur.u]=au.currentTime;ls.set('bp-pos',pos)}};
+$('#sk').oninput=e=>{if(au.duration)au.currentTime=e.target.value/1000*au.duration};
+$('#shx').onclick=()=>{$('#sh').hidden=true};
+async function search(){const q=$('#q').value.trim(),r=$('#r');if(!q)return;if(lang==='uz'){ytOpen(q+' podkast o‘zbek',q);return}if(topic==='▶ YouTube'){ytOpen(q+' podcast'+lvQ(),q);return}r.replaceChildren();r.append(el('h2','','“'+q+'” bo‘yicha natijalar'));
+const st=el('div','e','Qidirilmoqda…');r.append(st);
+try{const d=await itu(q,25),g=el('div','g');
+for(const x of(d.results||[])){if(!x.feedUrl)continue;g.append(card({n:x.collectionName,d:x.artistName||'',img:x.artworkUrl100||'',feed:x.feedUrl,title:x.collectionName,id:x.collectionId}))}
+st.replaceWith(g.children.length?g:el('div','e','Hech narsa topilmadi.'))}
+catch(e){st.textContent='Qidiruv ishlamadi. ';const a=el('button','x','Qayta urinish');a.onclick=search;st.append(a)}}
+$('#q').oninput=()=>{$('#r').replaceChildren();render()};
+$('#q').onkeydown=e=>{if(e.key==='Enter')search()};$('#go').onclick=search;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sh').hidden=true});
+/* Kunlik maqsad va eslatma */
+const GOAL=600;let days={},lt=0,lds=0;
+const pad=n=>String(n).padStart(2,'0'),key=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+function streak(){let n=0;const d=new Date();if(!(days[key(d)]>=GOAL))d.setDate(d.getDate()-1);while(days[key(d)]>=GOAL){n++;d.setDate(d.getDate()-1)}return n}
+function renderGoal(){const t=days[key(new Date())]||0,ok=t>=GOAL,n=streak();
+$('#gs').textContent=ok?'✓ Bugungi maqsad bajarildi!':'Bugun hali eshitmadingiz';
+$('#gd').textContent=Math.min(10,Math.floor(t/60))+'/10 daq · 🔥 '+n;
+$('#gp').style.width=Math.min(100,t/GOAL*100)+'%'}
+function tick(){const t=au.currentTime,d=t-lt;lt=t;if(d>0&&d<2&&!au.paused){const k=key(new Date());days[k]=(days[k]||0)+d;
+if(Date.now()-lds>5000){lds=Date.now();ls.set('bp-days',days)}renderGoal()}}
+function stamp(d,h,m){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(h)+pad(m)+'00'}
+function remTime(){const v=($('#rt').value||'20:00').split(':');return[+v[0],+v[1]]}
+function remLinks(){const[h,m]=remTime(),d=new Date(),e=new Date(d.getFullYear(),d.getMonth(),d.getDate(),h,m+15);ls.set('bp-rt',$('#rt').value);
+$('#rg').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('🎧 Bugungi podkast vaqti')+'&details='+encodeURIComponent('Kamida bitta podkast eshiting! '+location.href)+'&dates='+stamp(d,h,m)+'/'+stamp(e,e.getHours(),e.getMinutes())+'&recur='+encodeURIComponent('RRULE:FREQ=DAILY')}
+$('#rt').value=ls.get('bp-rt','20:00');$('#rt').onchange=remLinks;remLinks();
+$('#ri').onclick=()=>{const[h,m]=remTime(),d=new Date(),z=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'');
+const t=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//bs-podcasts//UZ','BEGIN:VEVENT','UID:bs-podcasts-daily@'+location.host,'DTSTAMP:'+z,'DTSTART:'+stamp(d,h,m),'RRULE:FREQ=DAILY','SUMMARY:🎧 Bugungi podkast vaqti','DESCRIPTION:Kamida bitta podkast eshiting!','BEGIN:VALARM','TRIGGER:PT0M','ACTION:DISPLAY','DESCRIPTION:Podkast vaqti','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/calendar'}));a.download='b-podcasts-eslatma.ics';document.body.append(a);a.click();a.remove()};
+/* YouTube: kalitni Google Cloud'dan olib shu yerga qo‘ying */
+const YT_KEY=window.YT_KEY||'';
+const EN={'Til o‘rganish':'learn english','Texnologiya':'technology','Biznes':'business','Karyera':'career','Fan':'science','Tarix':'history','O‘sish':'self improvement','Salomatlik':'health','Yangiliklar':'news','Sayohat':'travel','Sport':'sports','Hikoyalar':'storytelling','O‘yinlar':'video games','Komediya':'comedy','Madaniyat va musiqa':'music culture'};
+async function ytSearch(q){const ck='yt2:'+q+duF,c=ls.get(ck,null);if(c&&Date.now()-c.t<864e5)return c.v;
+const r=await fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoDuration='+(duF==='s'?'medium':'long')+'&maxResults=25'+(lang==='uz'?'&relevanceLanguage=uz&regionCode=UZ':'&relevanceLanguage=en')+'&q='+encodeURIComponent(q)+'&key='+encodeURIComponent(YT_KEY));
+const j=await r.json();if(!j.items)throw 0;let v=j.items.filter(i=>i.id&&i.id.videoId).map(i=>({id:i.id.videoId,t:i.snippet.title,a:i.snippet.channelTitle,m:0}));
+try{const r2=await fetch('https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id='+v.map(x=>x.id).join(',')+'&key='+encodeURIComponent(YT_KEY));const j2=await r2.json(),T={};
+(j2.items||[]).forEach(i=>{const m=/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/.exec(i.contentDetails.duration)||[];T[i.id]=(+m[1]||0)*60+(+m[2]||0)+((+m[3]||0)>=30?1:0)});v.forEach(x=>x.m=T[x.id]||0)}catch(e){}
+if(duF!=='Hammasi')v=v.filter(x=>!x.m||bk(x.m)===duF);ls.set(ck,{t:Date.now(),v});return v}
+function ytPanel(g){for(const t of Object.keys(D)){const c=el('div','c'),cv=el('div','cv',D[t][0]),m=el('div','m');const h=hue(t);cv.style.background=`linear-gradient(135deg,hsl(${h},80%,55%),hsl(${(h+60)%360},80%,45%))`;
+m.append(el('b','',t),el('small','','YouTube’dagi podkastlar'));c.append(cv,m);c.onclick=()=>ytOpen('english podcast '+EN[t]+lvQ()+' full episode',t);g.append(c)}
+g.append(el('div','e','Yuqoridagi qidiruv maydoniga yozib, “Hammasidan qidirish” ni bossangiz, YouTube’dan istalgan podkast topiladi.'))}
+async function ytOpen(q,title){const sh=$('#sh'),b=$('#shb');sh.hidden=false;sh.scrollTop=0;$('#sht').textContent='▶ '+title;
+if(!YT_KEY){b.replaceChildren(el('div','e','YouTube hali ulanmagan (API kalit kerak).'));return}
+b.replaceChildren(el('div','e','Qidirilmoqda…'));
+try{const v=await ytSearch(q);if(!v.length)throw 0;b.replaceChildren();const pl=el('div');b.append(pl);
+v.forEach(x=>{const r=el('button','ep'),i=el('i','','▶'),s=el('span');s.append(document.createTextNode(x.t),el('small','',x.a+(x.m?' · '+fmM(x.m):'')));r.append(i,s);
+r.onclick=()=>{au.pause();pl.replaceChildren();const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(x.id)+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;aspect-ratio:16/9;border:0;border-radius:14px';pl.append(f);sh.scrollTop=0};b.append(r)})}
+catch(e){b.replaceChildren();const d=el('div','e','YouTube qidiruvi ishlamadi (kalit noto‘g‘ri yoki kunlik limit tugagan). ');const a=el('button','x','Qayta urinish');a.onclick=()=>ytOpen(q,title);d.append(a);b.append(d)}}
+function setTh(t){document.documentElement.dataset.theme=t;try{localStorage.setItem('bp-theme',t)}catch(e){}}
+$('#tg').onclick=()=>{const c=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');setTh(c==='dark'?'light':'dark')};
+if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+/* Email bilan kirish. Supabase kalitlari bo‘sh bo‘lsa — oddiy (tasdiqlanmagan) kirish */
+const SB_URL='',SB_KEY='';
+let sb=null;if(SB_URL&&SB_KEY&&window.supabase){try{sb=supabase.createClient(SB_URL,SB_KEY)}catch(e){}}
+const lg=$('#lg'),lm=$('#lm');
+function enter(u){const email=typeof u==='string'?u:u.email;UP=email.toLowerCase()+':';fav=new Set(ls.get('bp-fav',[]));pos=ls.get('bp-pos',{});days=ls.get('bp-days',{});pf=ls.get('bp-pf',null);lang=ls.get('bp-lang','en');
+$('#rt').value=ls.get('bp-rt','20:00');remLinks();lg.hidden=true;const av=$('#av');if(u&&u.pic){av.src=u.pic;av.hidden=false}
+topic=lang==='en'&&pf?'Siz uchun':'Hammasi';renderGoal();render();if(!pf)openOb()}
+async function login(){const em=$('#le').value.trim();if(!/^\S+@\S+\.\S+$/.test(em)){lm.textContent='Email noto‘g‘ri ko‘rinadi.';return}
+if(sb){lm.textContent='Yuborilmoqda…';try{const{error}=await sb.auth.signInWithOtp({email:em,options:{emailRedirectTo:location.origin+location.pathname}});
+lm.textContent=error?'Xatolik: '+error.message:'Emailingizga kirish havolasi yuborildi. Pochtani oching va havolani bosing.'}catch(e){lm.textContent='Xatolik. Qayta urinib ko‘ring.'}}
+else{try{localStorage.setItem('bp-user',em)}catch(e){}enter(em)}}
+const GID=window.G_CLIENT_ID||'';
+const jwt=t=>{try{return JSON.parse(decodeURIComponent(escape(atob(t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')))))}catch(e){return null}};
+function logUser(u){if(window.LOG_URL)try{fetch(window.LOG_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({email:u.email,name:u.name,t:Date.now()})})}catch(e){}}
+function gCb(r){const p=jwt(r.credential);if(!p||p.aud!==GID||!p.email||p.exp*1000<Date.now()){lm.textContent='Kirish amalga oshmadi. Qayta urinib ko‘ring.';return}
+const u={email:p.email,name:p.name||'',pic:p.picture||''};try{localStorage.setItem('bp-user',JSON.stringify(u))}catch(e){}logUser(u);enter(u)}
+function initG(){if(!window.google||!google.accounts||!google.accounts.id)return false;
+google.accounts.id.initialize({client_id:GID,callback:gCb});google.accounts.id.renderButton($('#gbtn'),{theme:'filled_blue',size:'large',shape:'pill',text:'continue_with',width:260});return true}
+let obT=new Set(),obL='B1';
+function drawOb(){const a=$('#obt'),b=$('#obl');a.replaceChildren();b.replaceChildren();
+for(const t of Object.keys(D)){const x=el('button',obT.has(t)?'on':'',D[t][0]+' '+t);x.onclick=()=>{obT.has(t)?obT.delete(t):obT.add(t);drawOb()};a.append(x)}
+for(const v of['A2','B1','B2','C1']){const x=el('button',v===obL?'on':'',v);x.onclick=()=>{obL=v;drawOb()};b.append(x)}}
+function openOb(){const p=pf||{t:[],lv:'B1'};obT=new Set(p.t);obL=p.lv;drawOb();$('#ob').hidden=false}
+$('#obd').onclick=()=>{pf={t:[...obT],lv:obL};ls.set('bp-pf',pf);$('#ob').hidden=true;if(lang==='en')topic='Siz uchun';render()};
+$('#pfb').onclick=openOb;
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{lang=b.dataset.l;ls.set('bp-lang',lang);topic=lang==='en'&&pf?'Siz uchun':'Hammasi';render()});
+$('#lb').onclick=login;$('#le').onkeydown=e=>{if(e.key==='Enter')login()};
+$('#out').onclick=async()=>{try{if(sb)await sb.auth.signOut();localStorage.removeItem('bp-user')}catch(e){}location.reload()};
+(()=>{try{const raw=localStorage.getItem('bp-user');if(raw){enter(raw[0]==='{'?JSON.parse(raw):raw);return}}catch(e){}
+lg.hidden=false;if(GID){$('#le').hidden=true;$('#lb').hidden=true;let n=0;const iv=setInterval(()=>{if(initG()||++n>40)clearInterval(iv)},250)}})();
+</script>
+</body>
+</html>
